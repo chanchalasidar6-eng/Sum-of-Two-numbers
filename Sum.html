@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Number Adder</title>
+    <!-- Load Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for better aesthetics */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 1rem;
+        }
+
+        .card {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 0 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card bg-white p-6 sm:p-8 rounded-xl max-w-sm w-full transition-all duration-300">
+        <h1 class="text-3xl font-extrabold text-gray-900 mb-6 text-center">Add Two Numbers</h1>
+
+        <!-- Input Field 1 -->
+        <div class="mb-4">
+            <label for="number1" class="block text-sm font-medium text-gray-700 mb-1">First Number (A)</label>
+            <input type="number" id="number1" value="10" placeholder="Enter number 1"
+                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition duration-150 shadow-sm">
+        </div>
+
+        <!-- Input Field 2 -->
+        <div class="mb-6">
+            <label for="number2" class="block text-sm font-medium text-gray-700 mb-1">Second Number (B)</label>
+            <input type="number" id="number2" value="20" placeholder="Enter number 2"
+                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition duration-150 shadow-sm">
+        </div>
+
+        <!-- Calculation Button - This is the ONLY trigger for calculation -->
+        <button id="addButton" onclick="calculateSum()"
+            class="w-full bg-indigo-600 text-white font-bold py-3 rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50 transition duration-150 shadow-lg mb-6 active:scale-[0.99]">
+            = Calculate Sum
+        </button>
+
+        <!-- Result Display -->
+        <div class="bg-indigo-50 p-4 rounded-lg text-center">
+            <p class="text-sm font-semibold text-indigo-700 mb-1">Result (A + B):</p>
+            <p id="resultDisplay" class="text-4xl font-extrabold text-indigo-900">0</p>
+        </div>
+    </div>
+    <script src="./Sum.js"></script>
+</body>
+
+</html>
